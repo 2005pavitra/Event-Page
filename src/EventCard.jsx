@@ -6,7 +6,7 @@ import { FaCalendarAlt } from 'react-icons/fa';
 const App = () => {
 
     useEffect(() => {
-        document.body.style.backgroundColor = '#040023';
+      document.body.style.background = "linear-gradient(to right,#040023,rgb(1, 1, 94), #040023)";
         document.body.style.color = '#fff';
 
         const header = document.querySelector('header');
@@ -20,7 +20,7 @@ const App = () => {
     ];
 
     return (
-        <div>
+        <div className='min-h-screen '>
             {/* Header */}
             <header className="sticky top-0 z-10 text-white shadow-md">
                 <div className="flex justify-between items-center p-4">
@@ -29,44 +29,55 @@ const App = () => {
                         <img
                             src={logo}
                             alt="E-Cell Logo"
-                            className="h-16 w-36 object-contain"
+                            className="h-12 w-32 object-contain"
                         />
                     </div>
                 </div>
             </header>
 
             {/* Hero Section */}
-            <section id="home" className="text-center z-2 py-4">
-                <p className="text-4xl font-bold mt-4">Explore our Upcoming and Past Events</p>
-            </section>
+            
 
-            {/* Upcoming Events */}
-            <section id="upcoming" className="py-8 px-4 flex flex-col items-center">
-                <h2 className="text-2xl font-bold mb-6">Upcoming Events</h2>
-                <div className="flex flex-col sm:flex-row items-center  justify-center gap-6">
-                    {events.map((event) => (
-                        <div key={event.id} className="flex flex-col items-center border lg:w-200 sm:w-80 mx-4 sm:mx-12 rounded-lg p-4 shadow-md hover:shadow-lg">
-                            <img src={startup} alt="" className="pb-4" />
-                            <h3 className="text-2xl font-semibold">{event.title}</h3>
-                            <p className="text-gray-100 mt-2">{event.description}</p>
-                            <p className="text-gray-100 font-bold flex py-4">
-                                <FaCalendarAlt className="text-blue-500 mr-2" size={20} />
-                                {event.date}
-                            </p>
-                            <a
-                                type='button'
-                                href='/eventdetails'
-                                className="mt-4 text-blue-500 hover:text-blue-700 border-2 border-blue-500 px-4 py-2 rounded-lg"
-                            >
-                                View Details
-                            </a>
-                        </div>
-                    ))}
+{/* Upcoming Events */}
+<section id="upcoming" className="py-8 px-4">
+    <h2 className="text-4xl font-bold mb-6 text-center ">Upcoming Events</h2>
+    <div className="flex flex-col gap-8">
+        {events.map((event) => (
+            <div
+                key={event.id}
+                className="flex flex-col lg:flex-row items-center rounded-lg shadow-md hover:shadow-lg p-6 gap-6"
+            >
+                {/* Image on the left */}
+                <img
+                    src={startup}
+                    alt="Event"
+                    className="lg:w-180  pr-12 w-full rounded-lg"
+                />
+
+                {/* Content on the right */}
+                <div className="lg:w-2/3 w-full flex flex-col">
+                    <h3 className="text-5xl font-bold mb-2">{event.title}</h3>
+                    <p className="text-gray-100 text-2xl mb-4">{event.description}</p>
+                    <p className="text-gray- text-2xl font-bold flex items-center mb-4">
+                        <FaCalendarAlt className="text-blue-500 mr-2" size={20} />
+                        {event.date}
+                    </p>
+                    <a
+                        type="button"
+                        href="/eventdetails"
+                        className="mt-auto text-blue-500 hover:text-blue-700 border-2 border-blue-500 px-4 py-2 rounded-lg self-start"
+                    >
+                        View Details
+                    </a>
                 </div>
-            </section>
+            </div>
+        ))}
+    </div>
+</section>
+
 
             {/* Footer */}
-            <footer className="text-center bg-gray-800 text-white py-4">
+            <footer className="text-center text-white py-4 bottom-0 w-full">
                 <p>&copy; 2025 E-Cell. All rights reserved.</p>
                 <nav className="space-x-4">
                     <a href="#about" className="hover:text-gray-400">About Us</a>

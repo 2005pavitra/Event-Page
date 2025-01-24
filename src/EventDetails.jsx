@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import logo from './../public/logo.png'; 
-import startup from './../public/startup.png'; 
-import { FaMapMarkerAlt } from 'react-icons/fa'; 
+import logo from './../public/logo.png';
+import startup from './../public/startup.png';
+import contact from './../public/contact.png';
+import { FaMapMarkerAlt } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'; // Core Swiper styles
 import 'swiper/css/pagination'; // Optional styles for pagination
@@ -19,7 +20,7 @@ const EventDetails = () => {
         }
     }, []);
 
-    
+
     const slidesData = [
         { id: 1, title: "1.Problem Statement:", description: "Clarity and significance of the problem being addressed." },
         { id: 2, title: "2.Scale and Scope of the Problem:", description: "The potential impact and relevance of the problem." },
@@ -31,6 +32,19 @@ const EventDetails = () => {
         { id: 8, title: "8.Business Plan: ", description: "Coherence and strategic approach toward goals." },
         { id: 9, title: "9.Fund Requirement:", description: "Justification and allocation of funding needs." },
     ];
+
+    <style jsx>{`
+        .swiper-button-next, .swiper-button-prev {
+          font-size: 18px; /* Adjust the size of the arrows */
+        }
+      
+        /* On smaller screens */
+        @media (max-width: 640px) {
+          .swiper-button-next, .swiper-button-prev {
+            font-size: 14px; /* Smaller arrows on mobile */
+          }
+        }
+      `}</style>
 
     return (
         <div>
@@ -45,18 +59,18 @@ const EventDetails = () => {
                             className="h-16 w-36 object-contain" // Adjust size as needed
                         />
                     </div>
-                    
+
                 </div>
             </header>
 
             {/* Event Banner Section */}
             <section className="relative bg-cover bg-center" style={{ backgroundImage: `url(${startup})`, height: '400px' }}>
-                <div className="absolute inset-0 bg-black opacity-80"></div>
+                <div className="absolute inset-0 bg-black opacity-90"></div>
                 <div className="relative z-2 text-center text-white py-24">
                     <div className="flex items-center justify-center">
-                            <FaMapMarkerAlt className="text-blue-500 mr-2" size={40} />
-                            <p className="text-5xl font-bold">E-Cell Office, KRC Building, RGPV</p>
-                        </div>
+                        <FaMapMarkerAlt className="text-blue-500 mr-2" size={40} />
+                        <p className="text-5xl font-bold">E-Cell Office, KRC Building, RGPV</p>
+                    </div>
                     <p className="text-3xl mt-4">RGPV University’s Incubation Centre invites registered startups</p>
                 </div>
             </section>
@@ -66,19 +80,19 @@ const EventDetails = () => {
                 <div className="max-w-4xl mx-auto text-center">
                     <h3 className="text-3xl font-semibold text-white mb-4">Event Details</h3>
                     <p className="text-lg text-gray-300 mb-6">
-                        RGPV University’s Incubation Centre invites registered startups to a Pitching Session on 30th January 2025 at the RISE Building. 
-                        Present your innovative ideas to industry experts and investors based on criteria like problem statement, market scope, value proposition, 
-                        team credentials, solution design, competitive landscape, business model, plan, and funding requirements. 
+                        RGPV University’s Incubation Centre invites registered startups to a Pitching Session on 30th January 2025 at the RISE Building.
+                        Present your innovative ideas to industry experts and investors based on criteria like problem statement, market scope, value proposition,
+                        team credentials, solution design, competitive landscape, business model, plan, and funding requirements.
                         Gain feedback, mentorship, and potential funding opportunities. Don't miss this chance to take your startup to the next level!
                     </p>
-                    
+
                 </div>
             </section>
 
 
 
-       
-    
+
+
 
             {/* Timeline Section */}
             <section className="px-4 py-12 ">
@@ -98,7 +112,7 @@ const EventDetails = () => {
                                 </div>
                             </div>
 
-                           
+
 
                             <div className="relative flex justify-start items-center">
                                 <div className="w-8 h-8 rounded-full bg-blue-500 absolute -left-4 top-0"></div>
@@ -108,7 +122,7 @@ const EventDetails = () => {
                                 </div>
                             </div>
 
-                           
+
 
                             <div className="relative flex justify-start items-center">
                                 <div className="w-8 h-8 rounded-full bg-blue-500 absolute -left-4 top-0"></div>
@@ -118,49 +132,54 @@ const EventDetails = () => {
                                 </div>
                             </div>
 
-                           
+
                         </div>
                     </div>
                 </div>
             </section>
 
             <div className="slider-container ">
-                <h3 className='text-3xl font-semibold my-6 flex flex justify-center item-center'>Evaluation Criteria</h3>
-            <Swiper
-                modules={[Navigation, Pagination]}
-                spaceBetween={20}
-                slidesPerView={3}
-                breakpoints={{
-                    640: { slidesPerView: 2 },
-                    768: { slidesPerView: 3 },
-                    1024: { slidesPerView: 4 },
-                  }}
-                navigation
-                pagination={{ clickable: true }}
-                loop={true}
-                className="mySwiper"
-            >
-                {slidesData.map((slide) => (
-                    <SwiperSlide key={slide.id}>
-                        <div className="slide-content text-center p-4 border-1 h-40 rounded-lg shadow-md hover:bg-gray-900">
-                        <h2
-                  className="text-lg font-bold mb-2 truncate"
-                  style={{
-                    wordWrap: "break-word",
-                    overflow: "hidden",
-                    textOverflow: "ellipsis",
-                    whiteSpace: "nowrap",
-                  }}
-                >{slide.title}</h2>
-                            <p className="text-gray-100 ">{slide.description}</p>
-                        </div>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-        </div>
+                <h3 className='text-3xl font-semibold my-6 flex justify-center item-center'>Evaluation Criteria</h3>
+                <Swiper
+                    modules={[Navigation, Pagination]}
+                    spaceBetween={20}
+                    slidesPerView={3}
+                    breakpoints={{
+                        640: { slidesPerView: 2 },
+                        768: { slidesPerView: 3 },
+                        1024: { slidesPerView: 4 },
+                    }}
+                    navigation
+                    pagination={{ clickable: true }}
+                    loop={true}
+                    className="mySwiper"
+                >
+                    {slidesData.map((slide) => (
+                        <SwiperSlide key={slide.id}>
+                            <div className="slide-content text-center p-4 border-1 h-40 rounded-lg shadow-md hover:bg-gray-900">
+                                <h2
+                                    className="text-lg font-bold mb-2 truncate"
+                                    style={{
+                                        wordWrap: "break-word",
+                                        overflow: "hidden",
+                                        textOverflow: "ellipsis",
+                                        whiteSpace: "nowrap",
+                                    }}
+                                >{slide.title}</h2>
+                                <p className="text-gray-100 ">{slide.description}</p>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
+            
+
+
+            
+
 
             {/* Footer Section */}
-            <footer className="text-center bg-gray-800 text-white py-4 mt-8">
+            <footer className="text-center text-white py-4 mt-8">
                 <p>&copy; 2025 E-Cell. All rights reserved.</p>
                 <nav className="space-x-4">
                     <a href="#about" className="hover:text-gray-400">About Us</a>
