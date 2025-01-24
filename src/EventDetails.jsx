@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import logo from "./../public/logo.png";
-import startup from "./../public/startup.png";
-import { FaMapMarkerAlt } from "react-icons/fa";
+import contact from "./../public/contact.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation, Pagination } from "swiper/modules";
-import contact from "./../public/contact.png";
 
 const EventDetails = () => {
   useEffect(() => {
@@ -15,26 +13,6 @@ const EventDetails = () => {
       "linear-gradient(to right,#040023,rgb(1, 1, 94), #040023)";
     document.body.style.color = "#fff";
     document.body.style.fontFamily = "Times New Roman, sans-serif";
-
-    const header = document.querySelector(".header");
-    if (header) {
-      header.style.backgroundColor = "#040024";
-    }
-    const banner = document.querySelector(".banner");
-    if (banner) {
-      banner.style.backgroundColor =
-        "linear-gradient(to right,#040023,rgb(1, 1, 94), #040023)";
-    }
-    const timeline = document.querySelector(".timeline");
-    if (timeline) {
-      timeline.style.backgroundColor =
-        "linear-gradient(to top,#040023,rgb(1, 1, 94), #040023)";
-    }
-    const details = document.querySelector(".details");
-    if (details) {
-      details.style.backgroundColor =
-        "linear-gradient(to bottom,#040023,rgb(1, 1, 94), #040023)";
-    }
   }, []);
 
   const slidesData = [
@@ -50,32 +28,32 @@ const EventDetails = () => {
     },
     {
       id: 3,
-      title: "3.Value Proposition: ",
+      title: "3.Value Proposition:",
       description: "Uniqueness and effectiveness of the solution.",
     },
     {
       id: 4,
       title: "4.Team:",
-      description: "Founders' backgrounds, experience, and qualifications",
+      description: "Founders' backgrounds, experience, and qualifications.",
     },
     {
       id: 5,
       title: "5.Solution (Design):",
-      description: " Innovation and feasibility of the proposed solution.",
+      description: "Innovation and feasibility of the proposed solution.",
     },
     {
       id: 6,
-      title: "6.Competitive Landscape: ",
+      title: "6.Competitive Landscape:",
       description: "Understanding of the market and competitors.",
     },
     {
       id: 7,
       title: "7.Business Model:",
-      description: " Revenue model, scalability, and sustainability.",
+      description: "Revenue model, scalability, and sustainability.",
     },
     {
       id: 8,
-      title: "8.Business Plan: ",
+      title: "8.Business Plan:",
       description: "Coherence and strategic approach toward goals.",
     },
     {
@@ -85,25 +63,10 @@ const EventDetails = () => {
     },
   ];
 
-  <style jsx>{`
-    .swiper-button-next,
-    .swiper-button-prev {
-      font-size: 18px; /* Adjust the size of the arrows */
-    }
-
-    /* On smaller screens */
-    @media (max-width: 640px) {
-      .swiper-button-next,
-      .swiper-button-prev {
-        font-size: 14px; /* Smaller arrows on mobile */
-      }
-    }
-  `}</style>;
-
   return (
     <div className="mx-2">
       {/* Header */}
-      <header className="header sticky top-0 z-10 h-[5vmax] p-2 text-white shadow-md">
+      <header className="header sticky top-0 z-10 h-[5vmax] p-2 text-white shadow-md bg-[#040024]">
         <div className="flex justify-between items-center p-2">
           {/* Logo Section */}
           <div className="flex items-center space-x-2">
@@ -117,24 +80,21 @@ const EventDetails = () => {
       </header>
 
       {/* Event Banner Section */}
-      <section
-        className="banner w-5/6 text-center relative flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8 py-6 px-4 mx-auto"
-        style={{ minHeight: "70vh" }}
-      >
+      <section className="banner w-5/6 text-center relative flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8 py-6 px-4 mx-auto min-h-[70vh] bg-gradient-to-b from-[#040023] via-[#01015e] to-[#040023]">
         {/* Left Content */}
         <div className="relative z-2 text-white py-8 px-6 lg:py-20 lg:px-10 flex flex-col items-start justify-center gap-6 lg:w-1/2">
           <h2 className="text-xl lg:text-3xl font-bold text-center lg:text-left leading-snug">
             Elevate Your Startup Journey!
           </h2>
           <p className="text-md lg:text-lg text-gray-300 tracking-wide leading-8 text-center lg:text-left">
-           Join us at  <b>RGPV University's Incubation Centre</b> and pitch your
+            Join us at <b>RGPV University's Incubation Centre</b> and pitch your
             innovative ideas to leading industry experts and investors. Gain
             invaluable feedback and funding opportunities.
           </p>
         </div>
 
         {/* Right Image */}
-        <div className="flex justify-center items-center ">
+        <div className="flex justify-center items-center">
           <img
             src={contact}
             alt="Event Illustration"
@@ -144,7 +104,7 @@ const EventDetails = () => {
       </section>
 
       {/* Event Details Section */}
-      <section className="details px-4 py-8">
+      <section className="details px-4 py-8 bg-gradient-to-t from-[#040023] via-[#01015e] to-[#040023]">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-3xl font-semibold text-white mb-4">
             Event Details
@@ -163,7 +123,7 @@ const EventDetails = () => {
       </section>
 
       {/* Timeline Section */}
-      <section className="timeline px-4 py-12 lg:flex lg:items-center lg:justify-center lg:min-h-screen">
+      <section className="timeline px-4 py-12 lg:flex lg:items-center lg:justify-center lg:min-h-screen bg-gradient-to-b from-[#040023] via-[#01015e] to-[#040023]">
         <div className="max-w-4xl text-center text-white">
           <h3 className="text-3xl font-semibold mb-8">Event Timeline</h3>
           <div className="relative">
@@ -200,8 +160,9 @@ const EventDetails = () => {
         </div>
       </section>
 
-      <div className="slider-container ">
-        <h3 className="text-3xl font-semibold my-6 flex justify-center item-center">
+      {/* Slider Section */}
+      <div className="slider-container evaluation px-4 py-12 bg-gradient-to-r from-[#040023] via-[#01015e] to-[#040023]">
+        <h3 className="text-3xl font-semibold my-6 text-center">
           Evaluation Criteria
         </h3>
         <Swiper
@@ -223,16 +184,8 @@ const EventDetails = () => {
         >
           {slidesData.map((slide) => (
             <SwiperSlide key={slide.id}>
-              <div className="slide-content text-center p-4 border-1 h-40 rounded-lg shadow-md  hover:border-blue-300  transition-all duration-300">
-                <h2
-                  className="text-sm font-bold mb-2 truncate"
-                  style={{
-                    wordWrap: "break-word",
-                    overflow: "hidden",
-                    textOverflow: "ellipsis",
-                    whiteSpace: "nowrap",
-                  }}
-                >
+              <div className="slide-content text-center p-4 border h-40 rounded-lg shadow-md hover:border-blue-300 transition-all duration-300">
+                <h2 className="text-sm font-bold mb-2 truncate">
                   {slide.title}
                 </h2>
                 <p className="text-gray-100 text-2sm">{slide.description}</p>
@@ -242,10 +195,8 @@ const EventDetails = () => {
         </Swiper>
       </div>
 
-      <hr />
-
       {/* Footer Section */}
-      <footer className="text-center text-white py-4 mt-8">
+      <footer className="text-center text-white py-4 mt-8 bg-[#040024]">
         <p>&copy; 2025 E-Cell. All rights reserved.</p>
         <nav className="space-x-4">
           <a href="#about" className="hover:text-gray-400">
