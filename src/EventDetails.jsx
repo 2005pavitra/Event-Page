@@ -19,7 +19,7 @@ const EventDetails = () => {
 
 
 
-        const header = document.querySelector("header");
+        const header = document.querySelector(".header");
         if (header) {
             header.style.backgroundColor = "#040024";
         }
@@ -33,8 +33,9 @@ const EventDetails = () => {
         }
         const details = document.querySelector(".details");
         if (details) {
-            details.style.backgroundColor = "linear-gradient(to right,#040023,rgb(1, 1, 94), #040023)";
+            details.style.backgroundColor = "linear-gradient(to bottom,#040023,rgb(1, 1, 94), #040023)";
         }
+        
     }, []);
 
     const slidesData = [
@@ -103,7 +104,7 @@ const EventDetails = () => {
     return (
         <div className="mx-2">
             {/* Header */}
-            <header className="sticky top-0 z-10 text-white shadow-md">
+            <header className="header sticky top-0 z-10 text-white shadow-md">
                 <div className="flex justify-between items-center p-2">
                     {/* Logo Section */}
                     <div className="flex items-center space-x-2">
@@ -119,7 +120,7 @@ const EventDetails = () => {
             {/* Event Banner Section */}
             <section
                 className="banner w-5/6 text-center relative flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8 py-6 px-4 mx-auto"
-                style={{ minHeight: '100vh' }}
+                style={{ minHeight: '70vh' }}
             >
                 {/* Left Content */}
                 <div className="relative z-2 text-white py-6 px-4 lg:py-24 lg:px-6 flex flex-col items-start justify-center gap-4 lg:w-1/2">
@@ -162,7 +163,7 @@ const EventDetails = () => {
             </section>
 
             {/* Timeline Section */}
-            <section className="px-4 py-12 lg:flex lg:items-center lg:justify-center lg:min-h-screen">
+            <section className="timeline px-4 py-12 lg:flex lg:items-center lg:justify-center lg:min-h-screen">
                 <div className="max-w-4xl text-center text-white">
                     <h3 className="text-3xl font-semibold mb-8">Event Timeline</h3>
                     <div className="relative">
