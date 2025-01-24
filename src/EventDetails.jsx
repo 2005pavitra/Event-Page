@@ -7,15 +7,30 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Navigation, Pagination } from 'swiper/modules';
+import contact from './../public/contact.png';
 
 const EventDetails = () => {
     useEffect(() => {
         document.body.style.background = "linear-gradient(to right,#040023,rgb(1, 1, 94), #040023)";
         document.body.style.color = '#fff';
+        document.body.style.fontFamily = 'Times New Roman, sans-serif';
 
         const header = document.querySelector('header');
         if (header) {
             header.style.backgroundColor = '#040024';
+        }
+
+        const banner = document.querySelector('.banner');
+        if (banner) {
+            banner.style.background = 'linear-gradient(to top, #040023, rgb(1, 1, 94), #040023)';
+        }
+        const details = document.querySelector('.details');
+        if (details) {
+            details.style.background = 'linear-gradient(to left, #040023, rgb(1, 1, 94), #040023)';
+        }
+        const timeline = document.querySelector('.timeline');
+        if (timeline) {
+            timeline.style.background = 'linear-gradient(to bottom, #040023, rgb(1, 1, 94), #040023)';
         }
     }, []);
 
@@ -49,7 +64,7 @@ const EventDetails = () => {
         <div className='mx-2'>
             {/* Header */}
             <header className="sticky top-0 z-10 text-white shadow-md">
-                <div className="flex justify-between items-center p-4">
+                <div className="flex justify-between items-center p-2">
                     {/* Logo Section */}
                     <div className="flex items-center space-x-2">
                         <img
@@ -62,24 +77,38 @@ const EventDetails = () => {
             </header>
 
             {/* Event Banner Section */}
-            <section className="relative bg-cover bg-center" style={{ backgroundImage: `url(${startup})`, height: '400px' }}>
-                <div className="absolute inset-0 bg-black opacity-90"></div>
-                <div className="relative z-2 text-center text-white py-24 flex flex-col items-center justify-center gap-1.5">
-                    <div className="flex flex-col sm:flex-row items-center justify-center">
+            <section
+                className="banner  w-5/6 text-center relative  flex flex-col lg:flex-row items-center justify-center gap-1 lg:gap-1 py-1 px-4 lg:px-4 mx-auto"
+                style={{ minHeight: '70vh', display: 'flex' }}
+            >
+                {/* Left Content */}
+                <div className="relative z-2 text-white py-2 px-6 lg:py-24 lg:px-2 flex flex-col items-start justify-center gap-2 lg:w-1/2">
+                    <div className="flex lg:flex-col sm:flex-row justify-center items-center ml-3">
                         {/* Icon */}
-                        <FaMapMarkerAlt className="text-blue-500 mr-2 text-5xl sm:text-5xl md:text-5xl lg:text-20xl mb-4 sm:mb-0" />
-
+                        {/* <FaMapMarkerAlt className="text-blue-500 text-5xl lg:text-6xl -left-0" /> */}
                         {/* Text */}
-                        <p className="text-5xl font-bold">E-Cell Office, KRC Building, RGPV</p>
+                        <p className="text-3xl lg:text-5xl font-bold">E-Cell Office, KRC Building, RGPV</p>
                     </div>
-                    <p className="text-3xl mt-4">RGPV University's Incubation Centre invites registered startups</p>
+                    <p className="text-xl lg:text-3xl px-4">
+                        RGPV University's Incubation Centre invites registered startups.
+                    </p>
                 </div>
+
+                {/* Right Image */}
+                <img
+                    src={contact}
+                    alt="Event"
+                    className="lg:w-160 pr-12 w-full rounded-lg"
+                />
             </section>
 
 
+
+
+
             {/* Event Details Section */}
-            <section className="px-4 py-8">
-                <div className="max-w-4xl mx-auto text-center">
+            <section className="px-4 py-8 details">
+                <div className="max-w-4xl  mx-auto text-center">
                     <h3 className="text-3xl font-semibold text-white mb-4">Event Details</h3>
                     <p className="text-lg text-gray-300 mb-6">
                         RGPV University's Incubation Centre invites registered startups to a Pitching Session on 30th January 2025 at the RISE Building.
@@ -90,6 +119,7 @@ const EventDetails = () => {
 
                 </div>
             </section>
+            
 
 
 
@@ -97,14 +127,11 @@ const EventDetails = () => {
 
 
             {/* Timeline Section */}
-            <section className="px-4 py-12">
-                <div className="max-w-4xl mx-auto text-center text-white">
+            <section className="timeline px-4 py-12 lg:flex lg:items-center lg:justify-center lg:min-h-screen">
+                <div className="max-w-4xl text-center text-white">
                     <h3 className="text-3xl font-semibold mb-8">Event Timeline</h3>
                     <div className="relative">
-                        <div className="absolute inset-0 flex items-center justify-center h-5/6 -left-1 bg-blue-500 w-1.5">
-                            {/* Timeline line (optional) */}
-                            {/* <div className="border-l-4 border-blue-500 h-full -left-4"></div> */}
-                        </div>
+                        <div className="absolute inset-0 flex items-center justify-center h-5/6 -left-1 bg-blue-500 w-1.5"></div>
                         <div className="space-y-16">
                             {/* Event Phase 1 */}
                             <div className="relative flex justify-start items-center">
@@ -118,7 +145,7 @@ const EventDetails = () => {
                             {/* Event Phase 2 */}
                             <div className="relative flex justify-start items-center">
                                 <div className="lg:w-8 lg:h-8 sm:w-6 sm:h-6 w-4 h-4 rounded-full bg-blue-500 absolute transform -translate-x-1/2 top-0"></div>
-                                <div className="ml-10 text-left">
+                                <div className="ml-10 text-right">
                                     <p className="text-xl font-bold">10:30 AM</p>
                                     <p className="text-md text-gray-400">Reporting Time</p>
                                 </div>
@@ -127,7 +154,7 @@ const EventDetails = () => {
                             {/* Event Phase 3 */}
                             <div className="relative flex justify-start items-center">
                                 <div className="lg:w-8 lg:h-8 sm:w-6 sm:h-6 w-4 h-4 rounded-full bg-blue-500 absolute transform -translate-x-1/2 top-0"></div>
-                                <div className="ml-12 text-left">
+                                <div className="ml-12 text-right">
                                     <p className="text-xl font-bold">11 AM - 3:00 PM</p>
                                     <p className="text-md text-gray-400">Startup Pitching</p>
                                 </div>
@@ -136,6 +163,7 @@ const EventDetails = () => {
                     </div>
                 </div>
             </section>
+
 
 
             <div className="slider-container ">
@@ -147,7 +175,7 @@ const EventDetails = () => {
                     breakpoints={{
                         640: { slidesPerView: 1 },
                         768: { slidesPerView: 1 },
-                        1024: { slidesPerView: 4 },
+                        1024: { slidesPerView: 3 },
                     }}
                     navigation={{
                         nextEl: ".swiper-button-next",

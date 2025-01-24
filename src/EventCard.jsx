@@ -8,6 +8,11 @@ const App = () => {
     useEffect(() => {
         document.body.style.background = "linear-gradient(to right,#040023,rgb(1, 1, 94), #040023)";
         document.body.style.color = '#fff';
+        document.body.style.fontFamily = 'Times New Roman, sans-serif';
+        // // document.body.style.backgroundImage = `url(${startup})`;
+        // document.body.style.backgroundSize = 'cover';
+        // document.body.style.backgroundRepeat = 'no-repeat';
+        // document.body.style.backgroundAttachment = 'fixed';
 
         const header = document.querySelector('header');
         if (header) {
@@ -23,13 +28,13 @@ const App = () => {
         <div className='min-h-screen mx-2'>
             {/* Header */}
             <header className="sticky top-0 z-10 text-white shadow-md">
-                <div className="flex justify-between items-center p-4">
+                <div className="flex justify-between items-center p-2">
                     {/* Logo Section */}
                     <div className="flex items-center space-x-2">
                         <img
                             src={logo}
                             alt="E-Cell Logo"
-                            className="h-10 sm:h-6 lg:h-12 object-contain"
+                            className="h-6 sm:h-6 lg:h-12 object-contain"
                         />
                     </div>
                 </div>
@@ -40,19 +45,19 @@ const App = () => {
 
 
             {/* Upcoming Events */}
-            <section id="upcoming" className="py-8 px-4">
-                <h2 className="text-4xl font-bold mb-6 text-center ">Upcoming Event</h2>
-                <div className="flex flex-col gap-8">
+            <section id="upcoming" className="py-8 px-4 s">
+                <h2 className="text-4xl font-bold mb-6 text-center ">Upcoming Event...</h2>
+                <div className="flex flex-col gap-8 ">
                     {events.map((event) => (
                         <div
                             key={event.id}
-                            className="flex flex-col lg:flex-row items-center rounded-lg shadow-md hover:shadow-lg p-6 gap-6"
+                            className="flex flex-col lg:flex-row items-center rounded-lg shadow-lg hover:shadow-xl p-6 gap-6"
                         >
                             {/* Image on the left */}
                             <img
                                 src={startup}
                                 alt="Event"
-                                className="lg:w-180  pr-12 w-full rounded-lg"
+                                className="lg:w-160  pr-12 w-full rounded-lg"
                             />
 
                             {/* Content on the right */}
