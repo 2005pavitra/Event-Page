@@ -30,7 +30,7 @@ const App = () => {
     <div className="min-h-screen mx-2">
       {/* Header */}
       <header className="sticky top-0 z-10 text-white shadow-md">
-        <div className="flex justify-between items-center p-4">
+        <div className="flex justify-between items-center p-2">
           {/* Logo Section */}
           <div className="flex items-center space-x-2">
             <img
