@@ -9,6 +9,7 @@ const App = () => {
     document.body.style.background =
       "linear-gradient(to right,#040023,rgb(1, 1, 94), #040023)";
     document.body.style.color = "#fff";
+    document.body.style.fontFamily = "Times New Roman, sans-serif";
 
     const header = document.querySelector("header");
     if (header) {
