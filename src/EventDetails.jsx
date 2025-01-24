@@ -243,6 +243,8 @@ const EventDetails = () => {
                 </Swiper>
             </div>
 
+            <hr />
+
             {/* Footer Section */}
             <footer className="text-center text-white py-4 mt-8">
                 <p>&copy; 2025 E-Cell. All rights reserved.</p>
