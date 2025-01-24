@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const App = () => {
   useEffect(() => {
     document.body.style.background =
-      "linear-gradient(to right,#040023,rgb(1, 1, 94), #040023)";
+      "linear-gradient(to bottom,#040023,rgb(1, 1, 94), #040023)";
     document.body.style.color = "#fff";
     document.body.style.fontFamily = "Times New Roman, sans-serif";
 
@@ -45,7 +45,7 @@ const App = () => {
       {/* Hero Section */}
 
       {/* Upcoming Events */}
-      <section id="upcoming" className="py-8 px-4 ">
+      <section id="upcoming" className="py-8 px-4 border-b-2 border-gray-200 rounded">
         <h2 className="text-4xl font-bold mb-6 text-center ">Upcoming Event...</h2>
         <div className="flex flex-col gap-8">
           {events.map((event) => (
@@ -57,7 +57,7 @@ const App = () => {
               <img
                 src={startup}
                 alt="Event"
-                className="lg:w-180  pr-12 w-full rounded-lg"
+                className="lg:w-170  pr-12 w-full rounded-lg"
               />
 
               {/* Content on the right */}
