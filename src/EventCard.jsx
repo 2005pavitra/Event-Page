@@ -45,8 +45,8 @@ const App = () => {
       {/* Hero Section */}
 
       {/* Upcoming Events */}
-      <section id="upcoming" className="py-8 px-4">
-        <h2 className="text-4xl font-bold mb-6 text-center ">Upcoming Event</h2>
+      <section id="upcoming" className="py-8 px-4 bg-red-300">
+        <h2 className="text-4xl font-bold mb-6 text-center ">Upcoming Event...</h2>
         <div className="flex flex-col gap-8">
           {events.map((event) => (
             <div
