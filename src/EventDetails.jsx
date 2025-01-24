@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import logo from './../public/logo.png';
 import startup from './../public/startup.png';
-import contact from './../public/contact.png';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css'; // Core Swiper styles
-import 'swiper/css/pagination'; // Optional styles for pagination
-import 'swiper/css/navigation'; // Optional styles for navigation
-import { Navigation, Pagination } from 'swiper/modules'; // Swiper modules
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Navigation, Pagination } from 'swiper/modules';
 
 const EventDetails = () => {
     useEffect(() => {
-        document.body.style.backgroundColor = '#040023';
+        document.body.style.background = "linear-gradient(to right,#040023,rgb(1, 1, 94), #040023)";
         document.body.style.color = '#fff';
 
         const header = document.querySelector('header');
@@ -47,40 +46,43 @@ const EventDetails = () => {
       `}</style>
 
     return (
-        <div>
+        <div className='mx-2'>
             {/* Header */}
             <header className="sticky top-0 z-10 text-white shadow-md">
                 <div className="flex justify-between items-center p-4">
                     {/* Logo Section */}
                     <div className="flex items-center space-x-2">
                         <img
-                            src={logo} // Corrected logo path
+                            src={logo}
                             alt="E-Cell Logo"
-                            className="h-16 w-36 object-contain" // Adjust size as needed
+                            className="h-10 sm:h-6 lg:h-12 object-contain"
                         />
                     </div>
-
                 </div>
             </header>
 
             {/* Event Banner Section */}
             <section className="relative bg-cover bg-center" style={{ backgroundImage: `url(${startup})`, height: '400px' }}>
                 <div className="absolute inset-0 bg-black opacity-90"></div>
-                <div className="relative z-2 text-center text-white py-24">
-                    <div className="flex items-center justify-center">
-                        <FaMapMarkerAlt className="text-blue-500 mr-2" size={40} />
+                <div className="relative z-2 text-center text-white py-24 flex flex-col items-center justify-center gap-1.5">
+                    <div className="flex flex-col sm:flex-row items-center justify-center">
+                        {/* Icon */}
+                        <FaMapMarkerAlt className="text-blue-500 mr-2 text-5xl sm:text-5xl md:text-5xl lg:text-20xl mb-4 sm:mb-0" />
+
+                        {/* Text */}
                         <p className="text-5xl font-bold">E-Cell Office, KRC Building, RGPV</p>
                     </div>
-                    <p className="text-3xl mt-4">RGPV University’s Incubation Centre invites registered startups</p>
+                    <p className="text-3xl mt-4">RGPV University's Incubation Centre invites registered startups</p>
                 </div>
             </section>
+
 
             {/* Event Details Section */}
             <section className="px-4 py-8">
                 <div className="max-w-4xl mx-auto text-center">
                     <h3 className="text-3xl font-semibold text-white mb-4">Event Details</h3>
                     <p className="text-lg text-gray-300 mb-6">
-                        RGPV University’s Incubation Centre invites registered startups to a Pitching Session on 30th January 2025 at the RISE Building.
+                        RGPV University's Incubation Centre invites registered startups to a Pitching Session on 30th January 2025 at the RISE Building.
                         Present your innovative ideas to industry experts and investors based on criteria like problem statement, market scope, value proposition,
                         team credentials, solution design, competitive landscape, business model, plan, and funding requirements.
                         Gain feedback, mentorship, and potential funding opportunities. Don't miss this chance to take your startup to the next level!
@@ -95,70 +97,72 @@ const EventDetails = () => {
 
 
             {/* Timeline Section */}
-            <section className="px-4 py-12 ">
+            <section className="px-4 py-12">
                 <div className="max-w-4xl mx-auto text-center text-white">
-                    <h3 className="text-3xl font-semibold mb-6">Event Timeline</h3>
+                    <h3 className="text-3xl font-semibold mb-8">Event Timeline</h3>
                     <div className="relative">
-                        <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="absolute inset-0 flex items-center justify-center h-5/6 -left-1 bg-blue-500 w-1.5">
+                            {/* Timeline line (optional) */}
                             {/* <div className="border-l-4 border-blue-500 h-full -left-4"></div> */}
                         </div>
-                        <div className="space-y-18">
-                            {/* Event Phases */}
+                        <div className="space-y-16">
+                            {/* Event Phase 1 */}
                             <div className="relative flex justify-start items-center">
-                                <div className="w-8 h-8 rounded-full bg-blue-500 absolute -left-4 top-0"></div>
+                                <div className="lg:w-8 lg:h-8 sm:w-6 sm:h-6 w-4 h-4 rounded-full bg-blue-500 absolute transform -translate-x-1/2 top-0"></div>
                                 <div className="ml-10 text-left">
                                     <p className="text-xl font-bold">30th January 2025</p>
-                                    <p className="text-md text-gray-300">Event Kickoff - Pitching Session Begins at 10:00 AM</p>
+                                    <p className="text-md text-gray-400">Event Kickoff</p>
                                 </div>
                             </div>
 
-
-
+                            {/* Event Phase 2 */}
                             <div className="relative flex justify-start items-center">
-                                <div className="w-8 h-8 rounded-full bg-blue-500 absolute -left-4 top-0"></div>
+                                <div className="lg:w-8 lg:h-8 sm:w-6 sm:h-6 w-4 h-4 rounded-full bg-blue-500 absolute transform -translate-x-1/2 top-0"></div>
                                 <div className="ml-10 text-left">
-                                    <p className="text-xl font-bold">10:30 AM - 12:00 PM</p>
-                                    <p className="text-md text-gray-300">Startup Pitching - First Round</p>
+                                    <p className="text-xl font-bold">10:30 AM</p>
+                                    <p className="text-md text-gray-400">Reporting Time</p>
                                 </div>
                             </div>
 
-
-
+                            {/* Event Phase 3 */}
                             <div className="relative flex justify-start items-center">
-                                <div className="w-8 h-8 rounded-full bg-blue-500 absolute -left-4 top-0"></div>
-                                <div className="ml-10 text-left">
-                                    <p className="text-xl font-bold">1:00 PM - 3:00 PM</p>
-                                    <p className="text-md text-gray-300">Startup Pitching - Second Round</p>
+                                <div className="lg:w-8 lg:h-8 sm:w-6 sm:h-6 w-4 h-4 rounded-full bg-blue-500 absolute transform -translate-x-1/2 top-0"></div>
+                                <div className="ml-12 text-left">
+                                    <p className="text-xl font-bold">11 AM - 3:00 PM</p>
+                                    <p className="text-md text-gray-400">Startup Pitching</p>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
             </section>
+
 
             <div className="slider-container ">
                 <h3 className='text-3xl font-semibold my-6 flex justify-center item-center'>Evaluation Criteria</h3>
                 <Swiper
                     modules={[Navigation, Pagination]}
                     spaceBetween={20}
-                    slidesPerView={3}
+                    slidesPerView={2}
                     breakpoints={{
-                        640: { slidesPerView: 2 },
-                        768: { slidesPerView: 3 },
+                        640: { slidesPerView: 1 },
+                        768: { slidesPerView: 1 },
                         1024: { slidesPerView: 4 },
                     }}
-                    navigation
+                    navigation={{
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    }}
+
                     pagination={{ clickable: true }}
                     loop={true}
                     className="mySwiper"
                 >
                     {slidesData.map((slide) => (
                         <SwiperSlide key={slide.id}>
-                            <div className="slide-content text-center p-4 border-1 h-40 rounded-lg shadow-md hover:bg-gray-900">
+                            <div className="slide-content text-center p-4 border-1 h-40 rounded-lg shadow-md  hover:border-blue-300  transition-all duration-300">
                                 <h2
-                                    className="text-lg font-bold mb-2 truncate"
+                                    className="text-sm font-bold mb-2 truncate"
                                     style={{
                                         wordWrap: "break-word",
                                         overflow: "hidden",
@@ -166,16 +170,19 @@ const EventDetails = () => {
                                         whiteSpace: "nowrap",
                                     }}
                                 >{slide.title}</h2>
-                                <p className="text-gray-100 ">{slide.description}</p>
+                                <p className="text-gray-100 text-2sm">{slide.description}</p>
                             </div>
                         </SwiperSlide>
                     ))}
                 </Swiper>
+
+
             </div>
-            
 
 
-            
+
+
+
 
 
             {/* Footer Section */}
