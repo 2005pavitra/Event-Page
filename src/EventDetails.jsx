@@ -21,19 +21,23 @@ const EventDetails = () => {
 
         const header = document.querySelector(".header");
         if (header) {
-            header.style.backgroundColor = "#040024";
+            header.style.background = "#040024";
         }
         const banner = document.querySelector(".banner");
         if (banner) {
-            banner.style.backgroundColor = "linear-gradient(to right,#040023,rgb(1, 1, 94), #040023)";
+            banner.style.background = "linear-gradient(to bottom,#040023,rgb(1, 1, 94), #040023)";
         }
         const timeline = document.querySelector(".timeline");
         if (timeline) {
-            timeline.style.backgroundColor = "linear-gradient(to top,#040023,rgb(1, 1, 94), #040023)";
+            timeline.style.background = "linear-gradient(to bottom,#040023,rgb(1, 1, 94), #040023)";
         }
         const details = document.querySelector(".details");
         if (details) {
-            details.style.backgroundColor = "linear-gradient(to bottom,#040023,rgb(1, 1, 94), #040023)";
+            details.style.background = "linear-gradient(to up,#040023,rgb(1, 1, 94), #040023)";
+        }
+        const evaluation = document.querySelector(".evaluation");
+        if (evaluation) {
+            evaluation.style.background = "linear-gradient(to right,#040023,rgb(1, 1, 94), #040023)";
         }
         
     }, []);
@@ -201,7 +205,7 @@ const EventDetails = () => {
             </section>
 
 
-            <div className="slider-container ">
+            <div className="slider-container evaluation ">
                 <h3 className="text-3xl font-semibold my-6 flex justify-center item-center">
                     Evaluation Criteria
                 </h3>
