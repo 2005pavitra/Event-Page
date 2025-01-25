@@ -7,7 +7,7 @@ function Card() {
         {
           id: 1,
           title: "RISE Startup Pitch",
-          date: "Jan 30, 2025",
+          date: "Jan 31, 2025",
           description: "Exciting upcoming event!",
         },
       ];
