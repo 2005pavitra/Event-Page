@@ -161,7 +161,7 @@ const EventDetails = () => {
       </section>
 
       {/* Slider Section */}
-      <div className="slider-container evaluation px-4 py-12 bg-gradient-to-r from-[#040023] via-[#01015e] to-[#040023]">
+      <div className="slider-container evaluation px-8 py-12 bg-gradient-to-r from-[#040023] via-[#01015e] to-[#040023]">
         <h3 className="text-3xl font-semibold my-6 text-center">
           Evaluation Criteria
         </h3>
