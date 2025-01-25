@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import logo from "./../public/logo.png";
-import startup from "./../public/startup.png";
-import { FaCalendarAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import Card from "./Card";
 
 const App = () => {
+  const [showUpcoming, setShowUpcoming] = useState(true);
+
   useEffect(() => {
     document.body.style.background =
       "linear-gradient(to bottom,#040023,rgb(1, 1, 94), #040023)";
@@ -16,15 +16,6 @@ const App = () => {
       header.style.backgroundColor = "#040024";
     }
   }, []);
-
-  const events = [
-    {
-      id: 1,
-      title: "Rise Startup Pitch",
-      date: "Jan 30, 2025",
-      description: "Exciting upcoming event!",
-    },
-  ];
 
   return (
     <div className="min-h-screen mx-2">
@@ -42,47 +33,44 @@ const App = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* Toggle Buttons */}
+      <div className="flex justify-center mt-6 space-x-4">
+        <button
+          className={`px-4 py-2 rounded ${
+            showUpcoming ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-800"
+          }`}
+          onClick={() => setShowUpcoming(true)}
+        >
+          Upcoming Events
+        </button>
+        <button
+          className={`px-4 py-2 rounded ${
+            !showUpcoming ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-800"
+          }`}
+          onClick={() => setShowUpcoming(false)}
+        >
+          Past Events
+        </button>
+      </div>
 
-      {/* Upcoming Events */}
-      <section id="upcoming" className="py-8 px-4 border-b-2 border-gray-200 rounded">
-        <h2 className="text-4xl font-bold mb-6 text-center ">Upcoming Event...</h2>
-        <div className="flex flex-col gap-8">
-          {events.map((event) => (
-            <div
-              key={event.id}
-              className="flex flex-col lg:flex-row items-center rounded-lg shadow-md hover:shadow-lg p-6 gap-6"
-            >
-              {/* Image on the left */}
-              <img
-                src={startup}
-                alt="Event"
-                className="lg:w-170  pr-12 w-full rounded-lg"
-              />
-
-              {/* Content on the right */}
-              <div className="lg:w-2/3 w-full flex flex-col">
-                <h3 className="text-5xl font-bold mb-2">{event.title}</h3>
-                <p className="text-gray-100 text-2xl mb-4">
-                  {event.description}
-                </p>
-                <p className="text-gray- text-2xl font-bold flex items-center mb-4">
-                  <FaCalendarAlt className="text-blue-500 mr-2" size={20} />
-                  {event.date}
-                </p>
-                <Link
-                  to={"/eventdetails"}
-                  // type="button"
-                  // href="/eventdetails"
-                  className="mt-auto text-blue-500 hover:text-blue-700 border-2 border-blue-500 px-4 py-2 rounded-lg self-start"
-                >
-                  View Details
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* Section Content */}
+      {showUpcoming ? (
+        <section
+          id="upcoming"
+          className="py-8 px-4 border-b-2 border-gray-200 rounded"
+        >
+          <h2 className="text-4xl font-bold mb-6 text-center">Upcoming Events</h2>
+          <Card />
+        </section>
+      ) : (
+        <section
+          id="past"
+          className="py-8 px-4 border-b-2 min-h-120 border-gray-200 rounded"
+        >
+          <h2 className="text-4xl font-bold mb-6 text-center">Past Events</h2>
+          <p className="text-center mt-[2vmax] text-2xl">No past event records...</p>
+        </section>
+      )}
 
       {/* Footer */}
       <footer className="text-center text-white py-4 bottom-0 w-full">
