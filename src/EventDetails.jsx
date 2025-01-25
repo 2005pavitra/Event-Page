@@ -171,8 +171,8 @@ const EventDetails = () => {
           slidesPerView={1}
           breakpoints={{
             640: { slidesPerView: 1 },
-            768: { slidesPerView: 1 },
-            1024: { slidesPerView: 4 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
           }}
           navigation={{
             nextEl: ".swiper-button-next",
@@ -183,7 +183,7 @@ const EventDetails = () => {
           className="mySwiper"
         >
           {slidesData.map((slide) => (
-            <SwiperSlide key={slide.id}>
+            <SwiperSlide key={slide.id} className="px-2">
               <div className="slide-content text-center p-4 border h-40 rounded-lg shadow-md hover:border-blue-300 transition-all duration-300">
                 <h2 className="text-sm font-bold mb-2 truncate">
                   {slide.title}
