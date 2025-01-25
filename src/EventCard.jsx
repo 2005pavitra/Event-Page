@@ -38,8 +38,8 @@ const App = () => {
   <button
     className={`px-6 py-3 rounded-lg font-medium transition duration-300 ${
       showUpcoming
-        ? "bg-blue-700 text-white border-2 border-blue-700 hover:bg-blue-800"
-        : "bg-gray-100 text-gray-800 border-2 border-gray-300 hover:bg-gray-200"
+        ? "bg-blue-700 text-white border-2 border-blue-700 "
+        : "bg-gray-100 text-gray-800 border-2 border-gray-300 "
     }`}
     onClick={() => setShowUpcoming(true)}
   >
@@ -48,8 +48,8 @@ const App = () => {
   <button
     className={`px-6 py-3 rounded-lg font-medium transition duration-300 ${
       !showUpcoming
-        ? "bg-blue-700 text-white border-2 border-blue-700 hover:bg-blue-800"
-        : "bg-gray-100 text-gray-800 border-2 border-gray-300 hover:bg-gray-200"
+        ? "bg-blue-700 text-white border-2 border-blue-700"
+        : "bg-gray-100 text-gray-800 border-2 border-gray-300 "
     }`}
     onClick={() => setShowUpcoming(false)}
   >
