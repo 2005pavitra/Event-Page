@@ -59,7 +59,7 @@ const App = () => {
           id="upcoming"
           className="py-8 px-4 border-b-2 border-gray-200 rounded"
         >
-          <h2 className="text-4xl font-bold mb-6 text-center">Upcoming Events</h2>
+          <h2 className="mt-auto text-blue-500 hover:text-blue-700 border-2 border-blue-500 px-4 py-2 rounded-lg self-start">Upcoming Events</h2>
           <Card />
         </section>
       ) : (
