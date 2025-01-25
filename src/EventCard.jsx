@@ -35,22 +35,26 @@ const App = () => {
 
       {/* Toggle Buttons */}
       <div className="flex justify-center mt-6 space-x-4">
-        <button
-          className={`px-4 py-2 rounded ${
-            showUpcoming ? " border-2 border-blue-700 text-white" : " border-2 border-gray-100 text-gray-800"
-          }`}
-          onClick={() => setShowUpcoming(true)}
-        >
-          Upcoming Events
-        </button>
-        <button
-          className={`px-4 py-2 rounded ${
-            !showUpcoming ? " border-2 border-blue-700 text-white" : "border-2 border-100 text-gray-800"
-          }`}
-          onClick={() => setShowUpcoming(false)}
-        >
-          Past Events
-        </button>
+  <button
+    className={`px-6 py-3 rounded-lg font-medium transition duration-300 ${
+      showUpcoming
+        ? "bg-blue-700 text-white border-2 border-blue-700 hover:bg-blue-800"
+        : "bg-gray-100 text-gray-800 border-2 border-gray-300 hover:bg-gray-200"
+    }`}
+    onClick={() => setShowUpcoming(true)}
+  >
+    Upcoming Events
+  </button>
+  <button
+    className={`px-6 py-3 rounded-lg font-medium transition duration-300 ${
+      !showUpcoming
+        ? "bg-blue-700 text-white border-2 border-blue-700 hover:bg-blue-800"
+        : "bg-gray-100 text-gray-800 border-2 border-gray-300 hover:bg-gray-200"
+    }`}
+    onClick={() => setShowUpcoming(false)}
+  >
+    Past Events
+  </button>
       </div>
 
       {/* Section Content */}
