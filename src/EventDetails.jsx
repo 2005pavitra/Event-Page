@@ -18,47 +18,47 @@ const EventDetails = () => {
   const slidesData = [
     {
       id: 1,
-      title: "Problem Statement:",
+      title: "Problem Statement",
       description: "Clarity and significance of the problem being addressed.",
     },
     {
       id: 2,
-      title: "Scale and Scope of the Problem:",
+      title: "Scale and Scope of the Problem",
       description: "The potential impact and relevance of the problem.",
     },
     {
       id: 3,
-      title: "Value Proposition:",
+      title: "Value Proposition",
       description: "Uniqueness and effectiveness of the solution.",
     },
     {
       id: 4,
-      title: "Team:",
+      title: "Team",
       description: "Founders' backgrounds, experience, and qualifications.",
     },
     {
       id: 5,
-      title: "Solution (Design):",
+      title: "Solution (Design)",
       description: "Innovation and feasibility of the proposed solution.",
     },
     {
       id: 6,
-      title: "Competitive Landscape:",
+      title: "Competitive Landscape",
       description: "Understanding of the market and competitors.",
     },
     {
       id: 7,
-      title: "Business Model:",
+      title: "Business Model",
       description: "Revenue model, scalability, and sustainability.",
     },
     {
       id: 8,
-      title: "Business Plan:",
+      title: "Business Plan",
       description: "Coherence and strategic approach toward goals.",
     },
     {
       id: 9,
-      title: "Fund Requirement:",
+      title: "Fund Requirement",
       description: "Justification and allocation of funding needs.",
     },
   ];
@@ -167,7 +167,7 @@ const EventDetails = () => {
         </h3>
         <Swiper
           modules={[Navigation, Pagination]}
-          spaceBetween={20}
+          spaceBetween={30}
           slidesPerView={1}
           breakpoints={{
             640: { slidesPerView: 1 },
