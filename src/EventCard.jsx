@@ -37,7 +37,7 @@ const App = () => {
       <div className="flex justify-center mt-6 space-x-4">
         <button
           className={`px-4 py-2 rounded ${
-            showUpcoming ? "border-blue-700 text-white" : "border-gray-100 text-gray-800"
+            showUpcoming ? " border-2 border-blue-700 text-white" : " border-2 border-gray-100 text-gray-800"
           }`}
           onClick={() => setShowUpcoming(true)}
         >
@@ -45,7 +45,7 @@ const App = () => {
         </button>
         <button
           className={`px-4 py-2 rounded ${
-            !showUpcoming ? "border-blue-700 text-white" : "border-100 text-gray-800"
+            !showUpcoming ? " border-2 border-blue-700 text-white" : "border-2 border-100 text-gray-800"
           }`}
           onClick={() => setShowUpcoming(false)}
         >
