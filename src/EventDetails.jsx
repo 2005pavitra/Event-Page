@@ -82,7 +82,7 @@ const EventDetails = () => {
       </header>
 
 
-      {/* Event Banner Section 
+      {/* Event Banner Section */}
       <section className="banner w-5/6 text-center relative flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8 py-6 px-4 mx-auto min-h-[70vh] bg-gradient-to-b from-[#040023] via-[#01015e] to-[#040023]">
          Left Content
         <div className="relative z-2 text-white py-8 px-6 lg:py-20 lg:px-10 flex flex-col items-start justify-center gap-6 lg:w-1/2">
@@ -94,9 +94,9 @@ const EventDetails = () => {
             innovative ideas to leading industry experts and investors. Gain
             invaluable feedback and funding opportunities.
           </p>
-        </div>*/}
+        </div>
 
-        {/* Right Image 
+        {/* Right Image */}
         <div className="flex justify-center items-center">
           <img
             src={contact}
@@ -104,11 +104,8 @@ const EventDetails = () => {
             className="w-full lg:w-[85%] rounded-xl shadow-md"
           />
         </div>
-      </section>*/}
-      <section className="timeline px-4 py-12 lg:px-8 lg:py-16 lg:flex lg:items-center lg:justify-center lg:min-h-screen bg-gradient-to-b from-[#040023] via-[#01015e] to-[#040023]">
-      <div> < HeroSection /></div>
-      
       </section>
+      
       
 
       {/* Event Details Section */}
