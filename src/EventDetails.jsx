@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation, Pagination } from "swiper/modules";
 import { EventTimeline } from "./EventTimeLine";
-import {HeroSection} from "./HeroSection";
+import { HeroSection } from "./HeroSection";
 
 const EventDetails = () => {
   useEffect(() => {
@@ -105,8 +105,8 @@ const EventDetails = () => {
           />
         </div>
       </section>*/}
-      <section>
-        <div> <HeroSection/></div>
+      <section className="timeline px-4 py-12 lg:px-8 lg:py-16 lg:flex lg:items-center lg:justify-center lg:min-h-screen bg-gradient-to-b from-[#040023] via-[#01015e] to-[#040023]">
+        <div> < HeroSection /></div>
       </section>
 
       {/* Event Details Section */}
