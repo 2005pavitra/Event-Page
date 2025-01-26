@@ -36,7 +36,7 @@ const App = () => {
 
 
       {/* Toggle Buttons */}
-      <div className="flex justify-center mt-6 space-x-4">
+      <div className="flex justify-center mt-10 space-x-4">
         <button
           className={`px-6 py-3 rounded-lg font-medium transition duration-300 ${showUpcoming
             ? "bg-blue-700 text-white border-2 border-blue-700 "
