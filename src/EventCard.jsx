@@ -13,12 +13,12 @@ const App = () => {
 
     const header = document.querySelector("header");
     if (header) {
-      header.style.backgroundColor = "#040024";
+      header.style.backgroundColor = "#040023";
     }
   }, []);
 
   return (
-    <div className="min-h-screen mx-2">
+    <div className="min-h-screen">
       {/* Header */}
       <header className="header sticky top-0 z-10 p-2 text-white shadow-md bg-[#040024]">
   <div className="flex justify-between items-center p-2">
