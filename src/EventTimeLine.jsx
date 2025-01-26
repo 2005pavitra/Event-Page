@@ -2,7 +2,7 @@ import React from "react";
 
 export function EventTimeline() {
   return (
-    <div className="w-full max-w-[25rem] md:max-w-xl lg:max-w-full mx-auto px-4">
+    <div className="banner w-5/6 text-center relative flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8 py-6 px-4 mx-auto min-h-[70vh] bg-gradient-to-b from-[#040023] via-[#01015e] to-[#040023]">
       <div className="flex flex-col gap-10">
         {/* Event Kickoff */}
         <div className="relative flex items-center gap-6 flex-wrap md:flex-nowrap">
