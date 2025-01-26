@@ -85,7 +85,6 @@ const EventDetails = () => {
 
       {/* Event Banner Section */}
       <section className="banner w-5/6 text-center relative flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8 py-6 px-4 mx-auto min-h-[70vh] bg-gradient-to-b from-[#040023] via-[#01015e] to-[#040023]">
-         Left Content
         <div className="relative z-2 text-white py-8 px-6 lg:py-20 lg:px-10 flex flex-col items-start justify-center gap-6 lg:w-1/2">
           <h2 className="text-xl lg:text-3xl font-bold text-center lg:text-left leading-snug">
             Elevate Your Startup Journey!
