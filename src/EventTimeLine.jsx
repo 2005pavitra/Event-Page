@@ -24,7 +24,7 @@ export function EventTimeline() {
             <div className="h-16 w-px bg-gray-600 hidden md:block"></div>
           </div>
           <div className="flex-1 p-6 border border-gray-600 rounded-lg shadow-lg  ">
-            <h6 className="text-lg font-semibold text-white">30th January 2025</h6>
+            <h6 className="text-lg font-semibold text-white">31th January 2025</h6>
             <p className="text-base text-gray-400">Event Kickoff</p>
           </div>
         </div>
