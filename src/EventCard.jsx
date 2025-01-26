@@ -20,14 +20,14 @@ const App = () => {
   return (
     <div className="min-h-screen mx-2">
       {/* Header */}
-      <header className="sticky top-0 z-10 text-white shadow-md">
+      <header className="header sticky top-0 z-10 h-[5vmax] p-2 text-white shadow-md bg-[#040024]">
         <div className="flex justify-between items-center p-2">
           {/* Logo Section */}
           <div className="flex items-center space-x-2">
             <img
               src={logo}
               alt="E-Cell Logo"
-              className="h-10 sm:h-6 lg:h-12 object-contain"
+              className="h-10 sm:h-6 lg:h-12 w-[10vmax] object-contain"
             />
           </div>
         </div>
@@ -35,26 +35,24 @@ const App = () => {
 
       {/* Toggle Buttons */}
       <div className="flex justify-center mt-6 space-x-4">
-  <button
-    className={`px-6 py-3 rounded-lg font-medium transition duration-300 ${
-      showUpcoming
-        ? "bg-blue-700 text-white border-2 border-blue-700 "
-        : "bg-gray-100 text-gray-800 border-2 border-gray-300 "
-    }`}
-    onClick={() => setShowUpcoming(true)}
-  >
-    Upcoming Events
-  </button>
-  <button
-    className={`px-6 py-3 rounded-lg font-medium transition duration-300 ${
-      !showUpcoming
-        ? "bg-blue-700 text-white border-2 border-blue-700"
-        : "bg-gray-100 text-gray-800 border-2 border-gray-300 "
-    }`}
-    onClick={() => setShowUpcoming(false)}
-  >
-    Past Events
-  </button>
+        <button
+          className={`px-6 py-3 rounded-lg font-medium transition duration-300 ${showUpcoming
+              ? "bg-blue-700 text-white border-2 border-blue-700 "
+              : "bg-gray-100 text-gray-800 border-2 border-gray-300 "
+            }`}
+          onClick={() => setShowUpcoming(true)}
+        >
+          Upcoming Events
+        </button>
+        <button
+          className={`px-6 py-3 rounded-lg font-medium transition duration-300 ${!showUpcoming
+              ? "bg-blue-700 text-white border-2 border-blue-700"
+              : "bg-gray-100 text-gray-800 border-2 border-gray-300 "
+            }`}
+          onClick={() => setShowUpcoming(false)}
+        >
+          Past Events
+        </button>
       </div>
 
       {/* Section Content */}
