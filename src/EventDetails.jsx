@@ -66,18 +66,19 @@ const EventDetails = () => {
   return (
     <div className="mx-2">
       {/* Header */}
-      <header className="header sticky top-0 z-10 h-[5vmax] p-2 text-white shadow-md bg-[#040024]">
-        <div className="flex justify-between items-center p-2">
-          {/* Logo Section */}
-          <div className="flex items-center space-x-2">
-            <img
-              src={logo}
-              alt="E-Cell Logo"
-              className="h-10 sm:h-6 lg:h-12 w-[10vmax] object-contain"
-            />
-          </div>
-        </div>
-      </header>
+      <header className="header sticky top-0 z-10 p-2 text-white shadow-md bg-[#040024]">
+  <div className="flex justify-between items-center p-2">
+    {/* Logo Section */}
+    <div className="flex items-center space-x-2">
+      <img
+        src={logo}
+        alt="E-Cell Logo"
+        className="h-10 sm:h-8 lg:h-12 w-auto object-contain"
+      />
+    </div>
+  </div>
+</header>
+
 
       {/* Event Banner Section */}
       <section className="banner w-5/6 text-center relative flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8 py-6 px-4 mx-auto min-h-[70vh] bg-gradient-to-b from-[#040023] via-[#01015e] to-[#040023]">
