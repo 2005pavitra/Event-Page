@@ -19,7 +19,7 @@ const HeroSection = () => {
             </div>
             <div className="flex items-center gap-3 text-white/90 justify-center">
               <MapPin className="w-6 h-6" />
-              <span>Innovation Center, Tech Park</span>
+              <span>KRC RGPV</span>
             </div>
             <div className="flex items-center gap-3 text-white/90 justify-center">
               <Users className="w-6 h-6" />
