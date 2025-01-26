@@ -18,7 +18,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen mx-2">
       {/* Header */}
       <header className="header sticky top-0 z-10 p-2 text-white shadow-md bg-[#040024]">
   <div className="flex justify-between items-center p-2">
