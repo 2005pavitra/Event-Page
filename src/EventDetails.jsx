@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+ import React, { useEffect } from "react";
 import logo from "./../public/logo.png";
 import contact from "./../public/contact.png";
 import contact1 from "./../public/rb_1775.png";
@@ -94,7 +94,7 @@ const EventDetails = () => {
             innovative ideas to leading industry experts and investors. Gain
             invaluable feedback and funding opportunities.
           </p>
-          <button>Apply Now</button>
+          <button className="border-2 ">Apply Now</button>
         </div>
 
         {/* Right Image */}
