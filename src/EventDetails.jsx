@@ -94,6 +94,7 @@ const EventDetails = () => {
             innovative ideas to leading industry experts and investors. Gain
             invaluable feedback and funding opportunities.
           </p>
+          <button>Apply Now</button>
         </div>
 
         {/* Right Image */}
