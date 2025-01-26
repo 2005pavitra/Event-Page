@@ -86,7 +86,7 @@ const EventDetails = () => {
       {/* Event Banner Section */}
       <section className="banner w-5/6 text-center relative flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8 py-6 px-4 mx-auto min-h-[70vh] bg-gradient-to-b from-[#040023] via-[#01015e] to-[#040023]">
         <div className="relative z-2 text-white py-8 px-6 lg:py-20 lg:px-10 flex flex-col items-start justify-center gap-6 lg:w-1/2">
-          <h2 className="text-xl lg:text-3xl font-bold text-center lg:text-left leading-snug bg-gradient-to-r from-blue-500 via-teal-500 to-pink-500 bg-clip-text text-transparent select-none shadow-[0_0_20px_2px]">
+          <h2 className="text-xl lg:text-4xl font-bold text-center lg:text-left leading-snug bg-gradient-to-r from-blue-500 via-teal-500 to-pink-500 bg-clip-text text-transparent select-none shadow-[0_0_20px_2px]">
             Elevate Your Startup Journey!
           </h2>
           <p className="text-md lg:text-lg text-gray-300 tracking-wide leading-8 text-center lg:text-left">
@@ -115,14 +115,7 @@ const EventDetails = () => {
             Event Details
           </h3>
           <p className="text-lg text-gray-300 mb-6">
-            RGPV University's Incubation Centre invites registered startups to a
-            Pitching Session on 30th January 2025 at the RISE Building. Present
-            your innovative ideas to industry experts and investors based on
-            criteria like problem statement, market scope, value proposition,
-            team credentials, solution design, competitive landscape, business
-            model, plan, and funding requirements. Gain feedback, mentorship,
-            and potential funding opportunities. Don't miss this chance to take
-            your startup to the next level!
+            RGPV University's Incubation Centre is now accepting applications for the next round of start-up nominations! This is a fantastic opportunity for student entrepreneurs to receive mentorship, funding, and valuable resources to bring their innovative ideas to life. Submission ends on the 31st of January, 2025. 
           </p>
         </div>
       </section>
