@@ -13,48 +13,48 @@ const App = () => {
 
     const header = document.querySelector("header");
     if (header) {
-      header.style.backgroundColor = "#040024";
+      header.style.backgroundColor = "#040023";
     }
   }, []);
 
   return (
     <div className="min-h-screen mx-2">
       {/* Header */}
-      <header className="sticky top-0 z-10 text-white shadow-md">
-        <div className="flex justify-between items-center p-2">
-          {/* Logo Section */}
-          <div className="flex items-center space-x-2">
-            <img
-              src={logo}
-              alt="E-Cell Logo"
-              className="h-10 sm:h-6 lg:h-12 object-contain"
-            />
-          </div>
-        </div>
-      </header>
+      <header className="header  fixed top-0 left-0 w-full z-10 p-2 text-white shadow-md bg-[#040024]">
+  <div className="flex justify-between items-center p-2">
+    {/* Logo Section */}
+    <div className="flex items-center mx-2 space-x-2 left-0">
+      <img
+        src={logo}
+        alt="E-Cell Logo"
+        className="h-10 sm:h-8 lg:h-12 w-auto object-contain"
+      />
+    </div>
+  </div>
+</header>
+
+
 
       {/* Toggle Buttons */}
       <div className="flex justify-center mt-6 space-x-4">
-  <button
-    className={`px-6 py-3 rounded-lg font-medium transition duration-300 ${
-      showUpcoming
-        ? "bg-blue-700 text-white border-2 border-blue-700 "
-        : "bg-gray-100 text-gray-800 border-2 border-gray-300 "
-    }`}
-    onClick={() => setShowUpcoming(true)}
-  >
-    Upcoming Events
-  </button>
-  <button
-    className={`px-6 py-3 rounded-lg font-medium transition duration-300 ${
-      !showUpcoming
-        ? "bg-blue-700 text-white border-2 border-blue-700"
-        : "bg-gray-100 text-gray-800 border-2 border-gray-300 "
-    }`}
-    onClick={() => setShowUpcoming(false)}
-  >
-    Past Events
-  </button>
+        <button
+          className={`px-6 py-3 rounded-lg font-medium transition duration-300 ${showUpcoming
+            ? "bg-blue-700 text-white border-2 border-blue-700 "
+            : "bg-gray-100 text-gray-800 border-2 border-gray-300 "
+            }`}
+          onClick={() => setShowUpcoming(true)}
+        >
+          Upcoming Events
+        </button>
+        <button
+          className={`px-6 py-3 rounded-lg font-medium transition duration-300 ${!showUpcoming
+            ? "bg-blue-700 text-white border-2 border-blue-700"
+            : "bg-gray-100 text-gray-800 border-2 border-gray-300 "
+            }`}
+          onClick={() => setShowUpcoming(false)}
+        >
+          Past Events
+        </button>
       </div>
 
       {/* Section Content */}
