@@ -23,7 +23,7 @@ export function EventTimeline() {
             </div>
             <div className="h-16 w-px bg-gray-600 hidden md:block"></div>
           </div>
-          <div className="flex-1 p-6 border-3 border-gray-600 rounded-lg shadow-lg bg-cyan-500 shadow-cyan-500/50 ">
+          <div className="flex-1 p-6 border-3 border-cyan-500 rounded-lg shadow-lg  shadow-cyan-500/50 ">
             <h6 className="text-lg font-semibold text-white">31th January 2025</h6>
             <p className="text-base text-gray-400">Event Kickoff</p>
           </div>
@@ -48,7 +48,7 @@ export function EventTimeline() {
             </div>
             <div className="h-16 w-px bg-gray-600 hidden md:block"></div>
           </div>
-          <div className="flex-1 p-6 border border-gray-600 rounded-lg shadow-lg  ">
+          <div className="flex-1 p-6 border border-cyan-500 rounded-lg shadow-lg  ">
             <h6 className="text-lg font-semibold text-white">10:30 AM</h6>
             <p className="text-base text-gray-400">Reporting Time</p>
           </div>
@@ -68,7 +68,7 @@ export function EventTimeline() {
               </svg>
             </div>
           </div>
-          <div className="flex-1 p-6 border border-gray-600 rounded-lg shadow-lg ">
+          <div className="flex-1 p-6 border border-cyan-500 rounded-lg shadow-lg ">
             <h6 className="text-lg font-semibold text-white">11 AM - 3:00 PM</h6>
             <p className="text-base text-gray-400">Startup Pitching</p>
           </div>
