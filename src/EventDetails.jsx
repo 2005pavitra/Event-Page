@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import logo from "./../public/logo.png";
 import contact from "./../public/contact.png";
+import contact1 from "./../public/rb_1775.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -8,7 +9,7 @@ import "swiper/css/navigation";
 import { Navigation, Pagination } from "swiper/modules";
 import { EventTimeline } from "./EventTimeLine";
 // import { HeroSection } from "./HeroSection";
-import HeroSection from "./HeroSection";
+// import HeroSection from "./HeroSection";
 
 const EventDetails = () => {
   useEffect(() => {
@@ -82,12 +83,10 @@ const EventDetails = () => {
         </div>
       </header>
 
-
-      {/* Event Banner Section 
+      {/* Event Banner Section */}
       <section className="banner w-5/6 text-center relative flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8 py-6 px-4 mx-auto min-h-[70vh] bg-gradient-to-b from-[#040023] via-[#01015e] to-[#040023]">
-         Left Content
         <div className="relative z-2 text-white py-8 px-6 lg:py-20 lg:px-10 flex flex-col items-start justify-center gap-6 lg:w-1/2">
-          <h2 className="text-xl lg:text-3xl font-bold text-center lg:text-left leading-snug">
+          <h2 className="text-xl lg:text-4xl font-bold text-center lg:text-left leading-snug bg-gradient-to-r from-blue-500 via-teal-500 to-pink-500 bg-clip-text text-transparent select-none shadow-[0_0_20px_2px]">
             Elevate Your Startup Journey!
           </h2>
           <p className="text-md lg:text-lg text-gray-300 tracking-wide leading-8 text-center lg:text-left">
@@ -95,19 +94,24 @@ const EventDetails = () => {
             innovative ideas to leading industry experts and investors. Gain
             invaluable feedback and funding opportunities.
           </p>
-        </div>*/}
+          <button
+            className="bg-gradient-to-r cursor-pointer from-blue-500 to-purple-600 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg hover:from-purple-600 hover:to-blue-500 transition-all duration-300 transform hover:scale-105"
+            onClick={() => {
+              window.location.href = "mailto:rise@rgpv.ac.in";
+            }}
+          >
+            Apply Now
+          </button>
+        </div>
 
-        {/* Right Image 
+        {/* Right Image */}
         <div className="flex justify-center items-center">
           <img
-            src={contact}
+            src={contact1}
             alt="Event Illustration"
             className="w-full lg:w-[85%] rounded-xl shadow-md"
           />
         </div>
-      </section>*/}
-      <section className="timeline px-4 py-12 lg:px-8 lg:py-16 lg:flex lg:items-center lg:justify-center lg:min-h-screen bg-gradient-to-b from-[#040023] via-[#01015e] to-[#040023]">
-        <div> < HeroSection /></div>
       </section>
 
       {/* Event Details Section */}
@@ -117,14 +121,11 @@ const EventDetails = () => {
             Event Details
           </h3>
           <p className="text-lg text-gray-300 mb-6">
-            RGPV University's Incubation Centre invites registered startups to a
-            Pitching Session on 30th January 2025 at the RISE Building. Present
-            your innovative ideas to industry experts and investors based on
-            criteria like problem statement, market scope, value proposition,
-            team credentials, solution design, competitive landscape, business
-            model, plan, and funding requirements. Gain feedback, mentorship,
-            and potential funding opportunities. Don't miss this chance to take
-            your startup to the next level!
+            RGPV University's Incubation Centre is now accepting applications
+            for the next round of start-up nominations! This is a fantastic
+            opportunity for student entrepreneurs to receive mentorship,
+            funding, and valuable resources to bring their innovative ideas to
+            life. Submission ends on the 31st of January, 2025.
           </p>
         </div>
       </section>
@@ -161,11 +162,13 @@ const EventDetails = () => {
         >
           {slidesData.map((slide) => (
             <SwiperSlide key={slide.id} className="px-2">
-              <div className="slide-content shadow-lg shadow-cyan-500/50 text-center p-6 border-4 h-40 rounded-lg shadow-md hover:border-blue-300 transition-all duration-300">
+              <div className="slide-content border-indigo-500 shadow-lg shadow-indigo-500/50 text-center p-6 border-4 h-40 rounded-lg  hover:border-blue-300 shadow-lg shadow-cyan-500/50 transition-all duration-300">
                 <h2 className="text-lg font-extrabold text-white mb-4">
                   {slide.title}
                 </h2>
-                <p className="text-sm text-gray-200 mt-4">{slide.description}</p>
+                <p className="text-sm text-gray-200 mt-4">
+                  {slide.description}
+                </p>
               </div>
             </SwiperSlide>
           ))}

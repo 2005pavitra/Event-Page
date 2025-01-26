@@ -21,36 +21,36 @@ const App = () => {
     <div className="min-h-screen mx-2">
       {/* Header */}
       <header className="header  fixed top-0 left-0 w-full z-10 p-2 text-white shadow-md bg-[#040024]">
-  <div className="flex justify-between items-center p-2">
-    {/* Logo Section */}
-    <div className="flex items-center mx-2 space-x-2 left-0">
-      <img
-        src={logo}
-        alt="E-Cell Logo"
-        className="h-10 sm:h-8 lg:h-12 w-auto object-contain"
-      />
-    </div>
-  </div>
-</header>
-
-
+        <div className="flex justify-between items-center p-2">
+          {/* Logo Section */}
+          <div className="flex items-center mx-2 space-x-2 left-0">
+            <img
+              src={logo}
+              alt="E-Cell Logo"
+              className="h-10 sm:h-8 lg:h-12 w-auto object-contain"
+            />
+          </div>
+        </div>
+      </header>
 
       {/* Toggle Buttons */}
-      <div className="flex justify-center mt-6 space-x-4">
+      <div className="flex justify-center py-20 mt-10 space-x-4">
         <button
-          className={`px-6 py-3 rounded-lg font-medium transition duration-300 ${showUpcoming
-            ? "bg-blue-700 text-white border-2 border-blue-700 "
-            : "bg-gray-100 text-gray-800 border-2 border-gray-300 "
-            }`}
+          className={`px-6 py-3 rounded-lg font-medium transition duration-300 ${
+            showUpcoming
+              ? " text-white border-2 border-gray-300 "
+              : "  border-2 border-blue-700 "
+          }`}
           onClick={() => setShowUpcoming(true)}
         >
           Upcoming Events
         </button>
         <button
-          className={`px-6 py-3 rounded-lg font-medium transition duration-300 ${!showUpcoming
-            ? "bg-blue-700 text-white border-2 border-blue-700"
-            : "bg-gray-100 text-gray-800 border-2 border-gray-300 "
-            }`}
+          className={`px-6 py-3 rounded-lg font-medium transition duration-300 ${
+            !showUpcoming
+              ? " text-white border-2 border-gray-300"
+              : " border-2 border-blue-700"
+          }`}
           onClick={() => setShowUpcoming(false)}
         >
           Past Events
@@ -63,7 +63,9 @@ const App = () => {
           id="upcoming"
           className="py-8 px-4 border-b-2 border-gray-200 rounded"
         >
-          <h2 className="text-4xl font-bold mb-6 text-center">Upcoming Events</h2>
+          <h2 className="text-4xl font-bold mb-6 text-center">
+            Upcoming Events
+          </h2>
           <Card />
         </section>
       ) : (
@@ -72,7 +74,9 @@ const App = () => {
           className="py-8 px-4 border-b-2 min-h-120 border-gray-200 rounded"
         >
           <h2 className="text-4xl font-bold mb-6 text-center">Past Events</h2>
-          <p className="text-center mt-[2vmax] text-2xl">No past event records...</p>
+          <p className="text-center mt-[2vmax] text-2xl">
+            No past event records...
+          </p>
         </section>
       )}
 
