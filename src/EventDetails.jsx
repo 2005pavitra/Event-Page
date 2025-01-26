@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import logo from "./../public/logo.png";
 import contact from "./../public/contact.png";
+import contact1 from "./../public/rb_1775.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -99,7 +100,7 @@ const EventDetails = () => {
         {/* Right Image */}
         <div className="flex justify-center items-center">
           <img
-            src={contact}
+            src={contact1}
             alt="Event Illustration"
             className="w-full lg:w-[85%] rounded-xl shadow-md"
           />
