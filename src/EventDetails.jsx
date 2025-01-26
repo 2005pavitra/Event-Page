@@ -153,7 +153,7 @@ const EventDetails = () => {
         >
           {slidesData.map((slide) => (
             <SwiperSlide key={slide.id} className="px-2">
-              <div className="slide-content shadow-lg shadow-indigo-500/50 text-center p-6 border-4 h-40 rounded-lg  hover:border-blue-300 shadow-lg shadow-cyan-500/50 transition-all duration-300">
+              <div className="slide-content border-indigo-500 shadow-lg shadow-indigo-500/50 text-center p-6 border-4 h-40 rounded-lg  hover:border-blue-300 shadow-lg shadow-cyan-500/50 transition-all duration-300">
                 <h2 className="text-lg font-extrabold text-white mb-4">
                   {slide.title}
                 </h2>
