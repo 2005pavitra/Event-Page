@@ -20,10 +20,10 @@ const App = () => {
   return (
     <div className="min-h-screen mx-2">
       {/* Header */}
-      <header className="header mx-2 fixed top-0 left-0 w-full z-10 p-2 text-white shadow-md bg-[#040024]">
+      <header className="header  fixed top-0 left-0 w-full z-10 p-2 text-white shadow-md bg-[#040024]">
   <div className="flex justify-between items-center p-2">
     {/* Logo Section */}
-    <div className="flex items-center space-x-2 left-0">
+    <div className="flex items-center mx-2 space-x-2 left-0">
       <img
         src={logo}
         alt="E-Cell Logo"
