@@ -7,7 +7,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation, Pagination } from "swiper/modules";
 import { EventTimeline } from "./EventTimeLine";
-import { HeroSection } from "./HeroSection";
+// import { HeroSection } from "./HeroSection";
+import HeroSection from "./HeroSection";
 
 const EventDetails = () => {
   useEffect(() => {
