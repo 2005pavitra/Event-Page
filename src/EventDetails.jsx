@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation, Pagination } from "swiper/modules";
+import { EventTimeline } from "./EventTimeLine";
 
 const EventDetails = () => {
   useEffect(() => {
@@ -66,7 +67,7 @@ const EventDetails = () => {
   return (
     <div className="mx-2">
       {/* Header */}
-      <header className="header sticky top-0 z-10 h-[5vmax] p-2 text-white shadow-md bg-[#040024]">
+      <header className="header sticky top-0 z-10 min-h-[5vmax]  p-2 text-white shadow-md bg-[#040024]">
         <div className="flex justify-between items-center p-2">
           {/* Logo Section */}
           <div className="flex items-center space-x-2">
@@ -123,40 +124,10 @@ const EventDetails = () => {
       </section>
 
       {/* Timeline Section */}
-      <section className="timeline px-4 py-12 lg:flex lg:items-center lg:justify-center lg:min-h-screen bg-gradient-to-b from-[#040023] via-[#01015e] to-[#040023]">
-        <div className="max-w-4xl text-center text-white">
+      <section className="timeline px-4 py-12 lg:px-8 lg:py-16 lg:flex lg:items-center lg:justify-center lg:min-h-screen bg-gradient-to-b from-[#040023] via-[#01015e] to-[#040023]">
+        <div className=" text-center text-white max-w-screen-lg mx-auto">
           <h3 className="text-3xl font-semibold mb-8">Event Timeline</h3>
-          <div className="relative">
-            <div className="absolute inset-0 flex items-center justify-center h-5/6 -left-1 bg-blue-500 w-1.5"></div>
-            <div className="space-y-16">
-              {/* Event Phase 1 */}
-              <div className="relative flex justify-start items-center">
-                <div className="lg:w-8 lg:h-8 sm:w-6 sm:h-6 w-4 h-4 rounded-full bg-blue-500 absolute transform -translate-x-1/2 top-0"></div>
-                <div className="ml-10 text-left">
-                  <p className="text-xl font-bold">30th January 2025</p>
-                  <p className="text-md text-gray-400">Event Kickoff</p>
-                </div>
-              </div>
-
-              {/* Event Phase 2 */}
-              <div className="relative flex justify-start items-center">
-                <div className="lg:w-8 lg:h-8 sm:w-6 sm:h-6 w-4 h-4 rounded-full bg-blue-500 absolute transform -translate-x-1/2 top-0"></div>
-                <div className="ml-10 text-left">
-                  <p className="text-xl font-bold">10:30 AM</p>
-                  <p className="text-md text-gray-400">Reporting Time</p>
-                </div>
-              </div>
-
-              {/* Event Phase 3 */}
-              <div className="relative flex justify-start items-center">
-                <div className="lg:w-8 lg:h-8 sm:w-6 sm:h-6 w-4 h-4 rounded-full bg-blue-500 absolute transform -translate-x-1/2 top-0"></div>
-                <div className="ml-12 text-left">
-                  <p className="text-xl font-bold">11 AM - 3:00 PM</p>
-                  <p className="text-md text-gray-400">Startup Pitching</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <EventTimeline />
         </div>
       </section>
 
